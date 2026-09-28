@@ -324,6 +324,10 @@
         'review_category' => 'Catégorie de l\'avis',
         'title' => 'Titre',
         'version' => 'Version',
+        'show_deleted' => 'Afficher les supprimés',
+        'restore_selected' => 'Restaurer les sélectionnés',
+        'purge_deleted' => 'Purger les supprimés',
+        'confirm_purge_deleted' => 'Êtes-vous sûr de vouloir supprimer définitivement les enregistrements supprimés ?',
     ],
     'variant' => [
         'method' => [
@@ -587,6 +591,7 @@
         'total_weight' => 'Poids total',
         'total_rebate_rate' => 'Remise totale',
         'notes' => 'Notes',
+        'customer_notes' => 'Notes du client',
         'custom_fields' => 'Champs personnalisés',
         'shipping_enabled' => 'Expédition activée',
         'payment_transaction_id' => 'ID de la transaction de paiement',

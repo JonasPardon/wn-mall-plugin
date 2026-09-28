@@ -324,6 +324,10 @@
         'review_category' => 'Review category',
         'title' => 'Title',
         'version' => 'Version',
+        'show_deleted' => 'Show deleted',
+        'restore_selected' => 'Restore selected records',
+        'purge_deleted' => 'Purge deleted records',
+        'confirm_purge_deleted' => 'Purging deleted records: are you sure?',
     ],
     'variant' => [
         'method' => [
@@ -587,6 +591,7 @@
         'total_weight' => 'Total weight',
         'total_rebate_rate' => 'Total rebate',
         'notes' => 'Notes',
+        'customer_notes' => 'Customer notes',
         'custom_fields' => 'Custom fields',
         'shipping_enabled' => 'Shipping enabled',
         'payment_transaction_id' => 'Payment transaction id',

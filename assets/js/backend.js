@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", () => {
+    restoreBtn = document.querySelector('button[data-request="onRestoreSelected"]')
+    showDeletedFilter = document.getElementById('listFilter-scope-showDeleted')
+
+    if (showDeletedFilter) {
+        setButtonClass(restoreBtn, showDeletedFilter.checked)
+        showDeletedFilter.addEventListener('change', (event) => {
+            setButtonClass(restoreBtn, showDeletedFilter.checked)
+        })
+    }
+})
+
+function setButtonClass(btn, state)
+{
+    if (state) {
+        btn.classList.remove('hidden')
+    } else {
+        btn.classList.add('hidden')
+    }
+}
+
 function initializeSorting () {
     if (typeof Sortable === 'undefined') return;
     var $tbody = $('.drag-handle').parents('table.data tbody');
