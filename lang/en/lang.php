@@ -141,6 +141,8 @@
         'description' => 'Manage taxes',
     ],
     'general_settings' => [
+        'add_properties_controller' => 'Add Properties Controller',
+        'add_properties_controller_comment' => 'Add separate entries for the property & property groups controllers.',
         'category' => 'Mall: General',
         'category_payments' => 'Mall: Payments',
         'category_orders' => 'Mall: Orders',
@@ -366,6 +368,7 @@
         'datetime' => 'Date Time',
     ],
     'product' => [
+        'no_selection' => 'No products selected',
         'user_defined_id' => 'Product ID',
         'name' => 'Product name',
         'published' => 'Published',
@@ -461,6 +464,7 @@
         'create_new' => 'Create new set',
     ],
     'category' => [
+        'no_selection' => 'No categories selected',
         'name' => 'Name',
         'code' => 'Code',
         'code_comment' => 'This code can be used to identify this category in your frontend partials.',

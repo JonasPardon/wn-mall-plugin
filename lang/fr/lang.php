@@ -141,6 +141,8 @@
         'description' => 'Gérer les taxes',
     ],
     'general_settings' => [
+        'add_properties_controller' => 'Ajouter le controlleur de propriétés',
+        'add_properties_controller_comment' => 'Le controlleur de propriétés et celui des groupes de propriétés sont séparés.',
         'category' => 'Mall: Générale',
         'category_payments' => 'Mall: Paiements',
         'category_orders' => 'Mall: Commandes',
@@ -366,6 +368,7 @@
         'datetime' => 'Date et heure',
     ],
     'product' => [
+        'no_selection' => 'Aucun produit selectionné',
         'user_defined_id' => 'ID produit',
         'name' => 'Nom produit',
         'published' => 'Publié',
@@ -461,6 +464,7 @@
         'create_new' => 'Créer un nouvel ensemble',
     ],
     'category' => [
+        'no_selection' => 'Aucune catégorie selectionnée',
         'name' => 'Nom',
         'code' => 'Code',
         'code_comment' => 'Ce code peut être utilisé pour identifier cette catégorie dans vos partials frontend.',
