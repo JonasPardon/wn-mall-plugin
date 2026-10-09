@@ -1,21 +1,15 @@
 {
-    "name": "wn-mall-plugin",
+    "name": "winter/mall",
     "version": "2.1.4",
-    "homepage": "https://github.com/wintercms/wn-mall-plugin#readme",
+    "homepage": "https://github.com/wintercms/wn-mall-plugin",
     "description": "E-commerce solution for Winter CMS",
     "keywords": [
+        "wintercms",
         "winter",
-        "winter cms",
-        "plugin",
+        "cms",
         "e-commerce",
-        "shop"
-    ],
-    "author": "Tobias Kündig <tobias@offline.ch> (https://offline.ch)",
-    "contributors": [
-        {
-            "name": "Winter CMS Maintainers",
-            "url": "https://wintercms.com"
-        }
+        "shop",
+        "plugin"
     ],
     "license": "MIT",
     "repository": {
@@ -29,12 +23,27 @@
         "doc": "docs",
         "test": "tests"
     },
+    "authors": [
+        {
+            "name": "Tobias Kündig",
+            "email": "tobias@offline.ch",
+            "homepage": "https://offline.ch",
+            "role": "Original Author"
+        },
+        {
+            "name": "Winter CMS Maintainers",
+            "homepage": "https://wintercms.com",
+            "role": "Maintainer"
+        }
+    ],
+    "private": true,
+    "type": "module",
     "scripts": {
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
-        "docs:preview": "vuepress preview docs"
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs"
     },
     "devDependencies": {
-        "vuepress": "^1.9.10"
+        "vitepress": "^1.6.4"
     }
 }
