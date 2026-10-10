@@ -5,8 +5,8 @@ editLink: true
 
 # Mall Winter CMS Plugin
 
-Welcome to the official documentation of the **Mall** plugin, the all-inclusive e-commerce solution
-for the Laravel-based WinterCMS. 
+Welcome to the official documentation of the **Winter.Mall** plugin, the all-inclusive e-commerce solution
+for the Laravel-based WinterCMS platform.
 
 On the following pages you will find all the information you need to install the plugin on your 
 website and integrate it in your used theme. You will also read about the individual models, 
@@ -14,14 +14,15 @@ controllers and how you can extend them to integrate your own functions.
 
 > [!NOTE]
 > If you think, that some details are missing or not sufficiently well explained, we invite you to 
-> extend and add this to our documentation. For this case you will find an "Edit this page on GitHub" 
+> extend and add this to our documentation. For this case you will find an "**Edit this page on GitHub**" 
 > link at the bottom of each page, which brings you to the corresponding markdown file in our Github 
-> repository. Thanks for your help!
+> repository.  
+> Thanks for your help!
 
 
 ## Requirements
 
-We highly recommend using the latest WinterCMS v3 and PHP v8 versions available, however, the 
+We highly recommend using the latest WinterCMS v1.3+ and PHP v8 versions available, however, the 
 following requirements represent the minimum needed to run Mall on your website.
 
 - WinterCMS v1.2+ | v1.3+

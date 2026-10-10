@@ -18,7 +18,7 @@ export default defineConfig({
         },
         siteTitle: false,
         editLink: {
-            pattern: 'https://github.com/wintercms/wn-mall-plugin/tree/next/docs/:path',
+            pattern: 'https://github.com/wintercms/wn-mall-plugin/tree/develop/docs/:path',
             text: 'Edit this page on GitHub'
         },
         lastUpdated: {
@@ -130,5 +130,9 @@ export default defineConfig({
                 link: 'https://github.com/wintercms/wn-mall-plugin'
             }
         ]
+    },
+
+    markdown: {
+        lineNumbers: false,
     }
 })
