@@ -1,11 +1,9 @@
 # Product model
 
-
-
 The `Product` model is the central entity of your shop installation.
 
 ::: tip
-These are only examples of the most commonly used relationships.
+These are only examples of the most commonly used relationships.  
 Take a look at the [Product model's code](https://github.com/wintercms/wn-mall-plugin/blob/develop/models/Product.php) to gain deeper insights.
 :::
 
@@ -23,7 +21,7 @@ $model->property_values;
 ```   
 
 ::: warning CAUTION
-If you are working with Variants make sure to call the `all_property_values` relation instead.
+If you are working with Variants make sure to call the `all_property_values` relation instead.  
 This includes all property values of the `Product` and the `Variant` combined.
 :::
 
@@ -32,8 +30,10 @@ To get the value of a specific property the `getPropertyValue` method can be use
 ```php
 // Returns the value of Property ID 4
 $model->getPropertyValue(4);
+
 // Returns the value of the Property with the "size" slug
 $model->getPropertyValueBySlug('size');
+
 // Returns the value of the Property with the "Size" name
 $model->getPropertyValueByName('size');
 ```

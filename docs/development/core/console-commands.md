@@ -1,7 +1,5 @@
 # Console commands
 
-
-
 ## `mall:check`
 
 The `php artisan mall:check` console command runs a set of checks on your October installation and makes sure that 
@@ -13,8 +11,8 @@ The `php artisan mall:seed-demo` command will populate your installation with de
 
 
 ::: warning
-This will erase all shop data and reset all settings! Do not run this command if you have already configured your 
-installation. 
+**This will erase all shop data and reset all settings!**  
+Do not run this command if you have already configured your installation. 
 :::
 
 ## `mall:purge`
@@ -29,8 +27,8 @@ and tested your wn-mall-plugin installation on a production system.
 
 
 ::: warning
-This will erase all order and customer data! Do not run this command if you have already 
-opened your shop up to the public. 
+**This will erase all order and customer data!**  
+Do not run this command if you have already opened your shop up to the public. 
 :::
 
 ## `mall:index`
@@ -44,7 +42,7 @@ not working as expected.
 ::: warning
 During the re-indexing process your frontend will be wiped clean and 
 only show already re-indexed products. A re-indexing of a small 
-installation will only take a few seconds. Be aware that this process 
-might take a few minutes if you re-index a huge catalogue with thousands 
-of products.
+installation will only take a few seconds.  
+Be aware that this process might take a few minutes if you re-index 
+a huge catalogue with thousands of products.
 :::

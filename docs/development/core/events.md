@@ -1,7 +1,5 @@
 # Events
 
-
-
 The wn-mall-plugin emits the following events:
 
 ## Order
@@ -48,7 +46,7 @@ This event is emitted when a existing customer tries to sign in. This event rece
 implementation and the provided credentials as arguments. 
 
 ## Cart
-
+<!-- TODO - Add this event - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/classes/traits/cart/CartActions.php#L35
 ### `mall.cart.product.beforeAdded`
 
 This event is emitted before a product is added to the cart. It receives the following arguments:
@@ -63,6 +61,7 @@ This event is emitted before a product is added to the cart. It receives the fol
 If a `CartProduct` instance is returned from this event, Mall's internal logic to add the product to the Cart will be skipped.
 
 You can use this event to implement your own "add to cart" logic.
+-->
 
 ### `mall.cart.product.added`
 
@@ -96,9 +95,11 @@ This event is emitted when the quantity of a cart product has changed. It receiv
 * `oldQuantity` the old quantity value 
 * `newQuantity` the new quantity value 
 
+<!-- TODO: Add this event - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/models/PaymentMethod.php#L218
 ### `mall.cart.extendAvailablePaymentMethods`
 
 This event allows to customize the payment methods based on the current cart.
+-->
 
 ## Checkout
 
@@ -144,6 +145,7 @@ well as the related `Product` model.
 For a usage example see
 [Virtual Products -> Generate user specific product files](/guide/usage/virtual-products#generate-user-specific-product-files)
 
+<!-- TODO - Add this event - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/classes/traits/UserSpecificPrice.php#L46
 ### `mall.product.checkCustomerGroupDiscount`
 
 This event allows you to override a Product's customer group discount. 
@@ -158,10 +160,12 @@ Event::listen('mall.product.checkCustomerGroupDiscount', function ($model, \Wint
     // return false;
 });
 ```
+-->
 
 
 ## Products
 
+<!-- TODO - Add this event - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/components/Products.php#L501
 ### `mall.products.filter.extend`
 
 Use this event to change the Product filter configuration.
@@ -178,7 +182,8 @@ Event::listen('mall.products.filter.extend', function (\Winter\Mall\Components\P
       $filters->put('variant_id', new SetFilter(property: 'variant_id', values: [17], exclude: false));
 });
 ```
-
+-->
+<!-- TODO - Add this event - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/components/ProductsFilter.php#L513
 ## ProductsFilter
 
 ### `mall.productsFilter.props.extend`
@@ -196,6 +201,7 @@ Event::listen('mall.productsFilter.props.extend', function (\Winter\Mall\Compone
     $component->values = PropertyValue::visibleForLoggedInUser()->get()->unique('index_value')->groupBy('property_id');
 });
 ``
+-->
 
 
 ## Index
@@ -208,6 +214,7 @@ It receives the `Product` model (for Products) or the `Product` and `Variant` mo
 
 ## Backend 
 
+<!-- TODO - Check to see if this event can be added - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/controllers/orders/show.php#L103
 ### `mall.backend.order.sidebar`
 
 Add custom content to the order detail sidebar. This event receives the `$order` model as a single argument.
@@ -229,3 +236,4 @@ Event::listen('mall.backend.order.sidebar', function (\Winter\Mall\Models\Order 
     return $form->render();
 });
 ```
+-->

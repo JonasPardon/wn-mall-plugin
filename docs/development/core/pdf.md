@@ -1,7 +1,5 @@
 # PDF 
 
-
-
 Mall bundles the great [barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf/)
 to generate PDF files.
 
@@ -15,11 +13,9 @@ Currently, the `Order` and  `Wishlist` models implement it by default.
 
 ## Configuration
 
-Mall exposes all of the original
- [`barryvdh/laravel-dompdf` config entries](https://github.com/wintercms/wn-mall-plugin/blob/develop/config/pdf.php)
- in a separate configuration file.
+Mall exposes all of the original [`barryvdh/laravel-dompdf` config entries](https://github.com/wintercms/wn-mall-plugin/blob/develop/config/pdf.php) in a separate configuration file.
 
-If you wish to change the default PDF configuration create a `config/offline/mall/pdf.php`
+If you wish to change the default PDF configuration create a `config/winter/mall/pdf.php` 
 file and return your custom config.
 
-See [October's docs on overriding configuration](https://wintercms.com/docs/plugin/settings#file-configuration).
+See [Winter's docs on overriding configuration](https://wintercms.com/docs/develop/docs/plugin/settings#file-based-configuration).

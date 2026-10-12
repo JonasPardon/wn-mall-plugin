@@ -3,7 +3,7 @@
 ## 1. Install packages
 
 The following dependencies must be installed directly in the root folder of your WinterCMS 
-installation, and __not__ inside the `plugins/offline/mall` plugins root directory.
+installation, and __not__ inside the `plugins/winter/mall` plugins root directory.
 
 1. [`fakerphp/faker`](https://packagist.org/packages/fakerphp/faker)
 2. [`mockery/mockery`](https://packagist.org/packages/mockery/mockery)
@@ -15,7 +15,7 @@ composer require --dev "fakerphp/faker:^1.23" "mockery/mockery:^1.6"
 ## 2. Run tests
 
 You can either use Octobers `plugin:test Winter.Mall` console command, or you can visit the 
-`plugins/offline/mall` plugins root directory and run the whole test suite using the composer 
+`plugins/winter/mall` plugins root directory and run the whole test suite using the composer 
 command `composer test`.
 
 You can also use the PHPUnits `--filter` option to test only specific classes or methods. Visit 

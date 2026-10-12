@@ -1,13 +1,11 @@
 # Payment providers
 
-
-
 You can add your own payment provider by providing an implementation of a `PaymentProvider` class.
- 
+
 ## Implement a PaymentProvider 
 
-To implement a `PaymentProvider` simply extend the abstract `Winter\Mall\Classes\Payments\PaymentProvider` class and
- implement all missing methods. 
+To implement a `PaymentProvider` simply extend the abstract `Winter\Mall\Classes\Payments\PaymentProvider` 
+class and implement all missing methods. 
  
 You can place your custom `PaymentProvider` inside the `classes` directory of your plugin:
 
@@ -23,7 +21,7 @@ methods.
 
 ### Example implementation
  
- ```php
+```php
 <?php
 namespace YourName\YourPlugin\Classes;
 
@@ -85,7 +83,7 @@ class ExampleProvider extends \Winter\Mall\Classes\Payments\PaymentProvider
 
         return true;
     }
-    
+
     /**
      * Return any custom backend settings fields.
      * 
@@ -105,7 +103,7 @@ class ExampleProvider extends \Winter\Mall\Classes\Payments\PaymentProvider
             ],
         ];
     }
-    
+
     /**
      * Setting keys returned from this method are stored encrypted.
      *
@@ -130,7 +128,7 @@ class ExampleProvider extends \Winter\Mall\Classes\Payments\PaymentProvider
     {
         $gateway = AnyPaymentService::create();
         $gateway->setApiKey(decrypt(PaymentGatewaySettings::get('api_key')));
-        
+
         $response = null;
         try {
             $response = $gateway->purchase([
@@ -145,22 +143,22 @@ class ExampleProvider extends \Winter\Mall\Classes\Payments\PaymentProvider
             // There is no response data available so we pass an empty array.
             return $result->fail([], $e);
         }
-        
+
         // Get the payment data from your gateway. 
         $data = (array)$response->getData();
-        
+
         if ( ! $response->isSuccessful()) {
             // The response failed. Pass any payment data and the
             // response itself to the fail method to log this payment attempt.
             return $result->fail($data, $response);
         }
-        
+
         // The payment was successful! You may update the order here.
         // You don't have to save it since the success method will take
         // care of it.
         //
         // $this->order->card_holder_name = $data['card_holder_name'];
-        
+
         // Log the payment as successful.
         return $result->success($data, $response);
     }
@@ -188,6 +186,5 @@ class Plugin extends PluginBase {
         $gateway = $this->app->get(PaymentGateway::class);
         $gateway->registerProvider(new ExampleProvider());
     }
-    
 }
 ```

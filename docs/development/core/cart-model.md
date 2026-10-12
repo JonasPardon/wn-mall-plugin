@@ -1,7 +1,5 @@
 # Cart model
 
-
-
 The `Cart` model represents a customer's shopping cart.
 
 ## Retrieve a Cart 
@@ -20,11 +18,15 @@ for a Cart for a certain shipping method, you can use the following method:
 
 ```php
 // Shipping method 1 will always cost 400 €
-$cart->forceShippingPrice(1, ['EUR' => 400], 'Optional, alternative name');
+$cart->forceShippingPrice(
+    1,
+    ['EUR' => 400],
+    'Optional, alternative name'
+);
 ```   
 
 ::: warning
-Make sure to specify all Currencies you have installed in your shop.
+Make sure to specify all Currencies you have installed in your shop.  
 **Unspecified currencies will not be automatically calculated and result
 in a shipping price of 0!**
 :::

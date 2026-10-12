@@ -1,7 +1,5 @@
 # Order model
 
-
-
 The `Order` model represents a customer's completed order.
 
 A `Order` model is created as soon as the customer hits the checkout button.
@@ -16,9 +14,9 @@ on the Order model.
 
 ```php
 echo $order->id;
-=> 17
+// 17
 echo $order->payment_hash;
-=> "ng4gNkm5"
+// "ng4gNkm5"
 ```
 
 The `payment_hash` is presented to the shop admin on the orders backend page.
@@ -28,29 +26,29 @@ The `payment_hash` is presented to the shop admin on the orders backend page.
 Any payment instructions are by default rendered in the confirmation mails
 via the `payment_state` mail partial.
 
-See [Payment methods](/guide/usage/payment-methods#specifying-payment-instructions)
- for further information on how to use payment instructions.
+See [Payment methods](/guide/usage/payment-methods#specifying-payment-instructions) 
+for further information on how to use payment instructions.
 
 ## Access pricing information
 
-You can access the following price relationships on the `Order` model. Refer
-to the [pricing information](./pricing-information.md) page for more
+You can access the following price relationships on the `Order` model. Refer 
+to the [pricing information](./pricing-information.md) page for more 
 information on how to use these.
 
-| Relation                 | Description                        |             
-| ------------------------ | ---------------------------------- |             
-| totalPreTaxes            | Grand total before taxes           |             
-| totalTaxes               | Grand total taxes                  |             
-| totalPostTaxes           | Grand total after taxes            |             
-| totalProductPreTaxes     | Product total before taxes         |             
-| totalProductTaxes        | Product total taxes                |             
-| totalProductPostTaxes    | Product total after taxes          |             
-| totalShippingPreTaxes    | Shipping cost before taxes         |             
-| totalShippingTaxes       | Shipping cost taxes                |             
-| totalShippingPostTaxes   | Shipping cost after taxes          |             
-| totalPaymentPreTaxes     | Payment provider cost before taxes |             
-| totalPaymentTaxes        | Payment provider cost taxes        |             
-| totalPaymentPostTaxes    | Payment provider cost after taxes  |             
+| Relation                 | Description                        |
+| ------------------------ | ---------------------------------- |
+| totalPreTaxes            | Grand total before taxes           |
+| totalTaxes               | Grand total taxes                  |
+| totalPostTaxes           | Grand total after taxes            |
+| totalProductPreTaxes     | Product total before taxes         |
+| totalProductTaxes        | Product total taxes                |
+| totalProductPostTaxes    | Product total after taxes          |
+| totalShippingPreTaxes    | Shipping cost before taxes         |
+| totalShippingTaxes       | Shipping cost taxes                |
+| totalShippingPostTaxes   | Shipping cost after taxes          |
+| totalPaymentPreTaxes     | Payment provider cost before taxes |
+| totalPaymentTaxes        | Payment provider cost taxes        |
+| totalPaymentPostTaxes    | Payment provider cost after taxes  |
 
 ## Download PDF invoice
 

@@ -1,7 +1,5 @@
 # Variant model
 
-
-
 A `Variant` model always belongs to a parent [Product model](./product-model.md).
 
 Variant models by default inherit most of the data from their parent Product model.
@@ -38,8 +36,10 @@ To get the value of a specific property the `getPropertyValue` method can be use
 ```php
 // Returns the value of Property ID 4
 $model->getPropertyValue(4);
+
 // Returns the value of the Property with the "size" slug
 $model->getPropertyValueBySlug('size');
+
 // Returns the value of the Property with the "Size" name
 $model->getPropertyValueByName('size');
 ```

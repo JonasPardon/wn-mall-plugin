@@ -102,7 +102,7 @@ export default defineConfig({
                         { text: 'Wishlist Model', link: '/development/core/wishlist-model' },
                         { text: 'Payment Providers', link: '/development/core/payment-providers' },
                         { text: 'Pricing Information', link: '/development/core/pricing-information' },
-                        { text: 'Price Bag', link: '/development/core/price-bag' },
+                        // { text: 'Price Bag', link: '/development/core/price-bag' },
                         { text: 'Events', link: '/development/core/events' },
                         { text: 'PDF', link: '/development/core/pdf' },
                         { text: 'Integration', link: '/development/core/integration' },
@@ -134,5 +134,10 @@ export default defineConfig({
 
     markdown: {
         lineNumbers: false,
-    }
+    },
+
+    // Exclude specific source files from being processed by VitePress.
+    srcExclude: [
+        'drafts/**'
+    ]
 })

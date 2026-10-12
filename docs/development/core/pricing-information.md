@@ -1,7 +1,5 @@
 # Pricing information
 
-
-
 By default the following models have pricing information associated with them:
 
 * Product
@@ -24,7 +22,7 @@ You can access the pricing information associated with a model by calling the `p
 
 ```php
 $product->price();
-> Winter\Mall\Models\ProductPrice { ... }
+// Winter\Mall\Models\ProductPrice { ... }
 ```
 
 Some models have additional price relationships for special fields like `availableBelowTotal` ( 
@@ -32,10 +30,10 @@ ShippingMethod) or `totalToReach` (Discounts). All of these relationships return
  
 ```php
 $shippingMethod->availableBelowTotal();
-> Winter\Mall\Models\Price { ... }
+// Winter\Mall\Models\Price { ... }
 
 $discount->totalToReach();
-> Winter\Mall\Models\Price { ... }
+// Winter\Mall\Models\Price { ... }
 ```
 
 The relationship takes an optional `Currency` attribute. If no currency is specified the currently active one is used.
@@ -43,10 +41,10 @@ The currency can be supplied by ID, code or even as a Currency model instance.
 
 ```php
 $product->price('EUR');
-> Winter\Mall\Models\ProductPrice { ... } // Price in EUR
+// Winter\Mall\Models\ProductPrice { ... } // Price in EUR
 
 $product->price(2);
-> Winter\Mall\Models\ProductPrice { ... } // Price in EUR
+// Winter\Mall\Models\ProductPrice { ... } // Price in EUR
 ```
 
 
@@ -62,53 +60,53 @@ You can transform the price of a model by calling special getters on the `price(
 // Get the Price model in the active currency.
 $product->price();
 
-> Winter\Mall\Models\ProductPrice {
-   id: 1,
-   price: 89500,
-   product_id: 1,
-   variant_id: null,
-   currency_id: 1,
-   created_at: "2018-10-20 10:47:25",
-   updated_at: "2018-10-20 10:47:25",
-   currency: Winter\Mall\Models\Currency { ... },
- }
+// Winter\Mall\Models\ProductPrice {
+//    id: 1,
+//    price: 89500,
+//    product_id: 1,
+//    variant_id: null,
+//    currency_id: 1,
+//    created_at: "2018-10-20 10:47:25",
+//    updated_at: "2018-10-20 10:47:25",
+//    currency: Winter\Mall\Models\Currency { ... },
+// }
  
 // Get the Price in the active currency in different formats.
 $product->price()->integer;
-> 89500
+// 89500
 
 $product->price()->float;
-> 895.0
+// 895.0
 
 $product->price()->decimal;
-> "895.00"
+// "895.00"
 
 $product->price()->string;
-> "$ 895.00"
+// "$ 895.00"
 
 (string) $product->price();
-> "$ 895.00"
+// "$ 895.00"
 
 // Get the price in a different currency.
 $product->price('EUR')->string;
-> "795.00 €"
+// "795.00 €"
 
 // Can also be done by id.
 $product->price(2)->string;
-> "795.00 €"
+// "795.00 €"
 
 // Or by model.
 $currency = \Winter\Mall\Models\Currency::find(2);
 $product->price($currency)->string;
-> "795.00 €"
+// "795.00 €"
 
 // Get an array of all currencies as formatted strings.
 $model->price;
-> October\Rain\Database\Collection {#3412
-   all: [
-     "USD" => "$ 895.00",
-     "EUR" => "795 00€",
-     "CHF" => "CHF 899.00",
-   ],
- }
+// October\Rain\Database\Collection {
+//   all: [
+//     "USD" => "$ 895.00",
+//     "EUR" => "795 00€",
+//     "CHF" => "CHF 899.00",
+//   ],
+// }
 ```

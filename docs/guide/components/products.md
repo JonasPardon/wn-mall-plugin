@@ -163,7 +163,7 @@ sort = "random"
 
 ### Add a add to cart button on the category page
 
-Add the following `a` tag to your item partial `/plugins/offline/components/products/item.htm`
+Add the following `a` tag to your item partial `/plugins/winter/components/products/item.htm`
 
 ```html
 <div class="mall-products-item">

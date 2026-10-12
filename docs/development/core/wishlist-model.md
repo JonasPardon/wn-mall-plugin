@@ -1,7 +1,5 @@
 # Wishlist model
 
-
-
 The `Wishlist` model represents a customer's wishlist.
 
 ## PDF download
@@ -29,5 +27,6 @@ $pdf->stream();                   // Return download response
 $pdf->output();                   // Return string representation
 ```
 
-Take a look at the demo theme for an example implementation:
+Take a look at the demo theme for an example implementation:  
 [https://github.com/wintercms/wn-mall-theme/tree/master/partials/mallPDF/wishlist](https://github.com/wintercms/wn-mall-theme/tree/master/partials/mallPDF/wishlist)
+<!-- TODO: Update link to the relevant fils when the demo theme is finalized -->
