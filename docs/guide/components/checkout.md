@@ -1,12 +1,10 @@
 # Checkout
 
-
-
 The `Checkout` component orchestrates the complete checkout process.
 An alternative to this component is the [QuickCheckout](./quick-checkout.md) component.
 
-By changing the `step` property, a different checkout step will be displayed. The component takes 
-care of all redirects and component initialisations.
+By changing the `step` property, a different checkout step will be displayed.  
+The component takes care of all redirects and component initialisations.
 
 ## Properties
 
@@ -14,9 +12,11 @@ care of all redirects and component initialisations.
 
 The currently active checkout step. This parameter should be filled via URL parameter.
 
+<!-- TODO: Add a description for the `showNotesField` property
 ### `showNotesField` (boolean)
 
 Determines if the customer notes field should be displayed.
+-->
 
 ## Example implementations
 
@@ -30,7 +30,6 @@ url = "/checkout/:step?"
 
 [checkout]
 step = "{{ :step }}"
-showNotesField = true
 ==
 {% if not user %}
     {% component 'signUp' %}

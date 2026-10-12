@@ -1,24 +1,26 @@
 # WishlistButton
 
-
-
 The `wishlistButton` component displays a `Add to wishlist` button.
 
 The button includes a simple popup where the user can choose a specific
 wishlist or create a new one.
- 
+
 ## Properties
 
-You have to provide a product and variant ID of the product or variant
-to be added to the wishlist.
+It's best to use the properties directly from the currently viewed product or variant, see code example below.
 
-The variant id can be `null`. 
+## `product` (int)
+The ID of the product to be added to the wishlist.
+
+## `variant` (int|null)
+The ID of the variant to be added to the wishlist. Can be `null`.
 
 ## Styling
 
 Take a look
 at [the relevant SCSS files in our demo repository](https://github.com/wintercms/wn-mall-theme/blob/master/resources/scss/mall/wishlists.scss)
 to get an idea on how to style this component.
+<!-- TODO: Update link to the relevant SCSS files when the demo theme is finalized -->
 
 ## Events
 
@@ -41,8 +43,9 @@ $(function () {
 If you place this button inside the [Product component](./product.md)
 you can reference the `item` variable to access the currenlty viewed product/variant.
 
-Checkout [the source of the demo website](https://github.com/wintercms/wn-mall-theme/blob/master/partials/product/belowcartbutton.htm)
- to see an example implementation.
+Checkout [the source of the demo website](https://github.com/wintercms/wn-mall-theme/blob/master/partials/product/belowcartbutton.htm) 
+to see an example implementation.
+<!-- TODO: Update link to the relevant SCSS files when the demo theme is finalized -->
 
 ```twig
 [wishlistButton]

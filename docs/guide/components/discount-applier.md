@@ -1,12 +1,12 @@
 # DiscountApplier
 
-
-
 The `DiscountApplier` component allows the user to enter a discount code.
 
 ## Properties
 
-There are no properties available for this component.
+### `discountCodeLimit` (int)
+
+The maximum number of discount codes that can be applied. Set to `0` for no limit.
 
 ## Example implementations
 

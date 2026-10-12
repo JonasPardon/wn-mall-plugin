@@ -1,7 +1,5 @@
 # Cart
 
-
-
 The `Cart` component displays the currently logged in user's cart.
 
 It can also be used to display a "items in cart" type element.
@@ -13,6 +11,9 @@ It can also be used to display a "items in cart" type element.
 Display the [`DiscountApplier`](./discount-applier.md) component with the cart. This allows the user to apply a 
 discount code directly from the cart overview.
 
+### `discountCodeLimit` (int)
+
+The maximum number of discount codes that can be applied to the cart. Set to `0` for no limit.
 
 ### `showTaxes` (bool)
 
@@ -96,26 +97,27 @@ url = "/cart"
 [cart]
 ==
 <?php
-use Winter\Mall\Models\Cart;
-use Winter\Mall\Models\ShippingMethod;
+    use Winter\Mall\Models\Cart;
+    use Winter\Mall\Models\ShippingMethod;
 
-function onInit() {
-    // Set this to your free shipping method
-    $freeShippingMethod = 2;
-    
-    // Get the user's cart total
-    $cart = Cart::byUser(Auth::user());
-    $total = $cart->totals->productPostTaxes();
+    function onInit() {
+        // Set this to your free shipping method
+        $freeShippingMethod = 2;
 
-    // Get the free shipping method and check the total
-    // it needs to become available.
-    $freeShipping = ShippingMethod::find($freeShippingMethod);
-    $totalNeeded  = $freeShipping->availableAboveTotal()->integer;
-    
-    // costLeft ist the difference the customer needs to add to
-    // her cart until the free shipping becomes available.
-    $this['costLeft'] = $totalNeeded - $total;
-}
+        // Get the user's cart total
+        $cart = Cart::byUser(Auth::user());
+        $total = $cart->totals->productPostTaxes();
+
+        // Get the free shipping method and check the total
+        // it needs to become available.
+        $freeShipping = ShippingMethod::find($freeShippingMethod);
+        $totalNeeded  = $freeShipping->availableAboveTotal()->integer;
+
+        // costLeft ist the difference the customer needs to add to
+        // her cart until the free shipping becomes available.
+        $this['costLeft'] = $totalNeeded - $total;
+    }
+?>
 ==
 {% component 'cart' %}
 

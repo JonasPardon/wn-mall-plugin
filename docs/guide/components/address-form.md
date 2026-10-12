@@ -1,7 +1,5 @@
 # AddressForm
 
-
-
 The `AddressForm` component displays a address edit form.
 
 ## Properties
@@ -27,7 +25,7 @@ Whether to set the address as `billing` or `shipping` address for the user's car
 
 ### Display the address form
 
-```ini
+```twig{9-12,18}
 title = "Address"
 url = "/address/:address?/:redirect?/:set?"
 
@@ -35,8 +33,18 @@ url = "/address/:address?/:redirect?/:set?"
 security = "user"
 redirect = "home"
 
+<!-- [!code focus:4] -->
 [addressForm]
 address = "{{ :address }}"
 redirect = "{{ :redirect }}"
 set = "{{ :set }}"
+==
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- [!code focus:1] -->
+            {% component 'addressForm' %}
+        </div>
+    </div>
+</div>
 ```

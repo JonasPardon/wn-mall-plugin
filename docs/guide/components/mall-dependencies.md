@@ -1,7 +1,5 @@
 # mallDependencies
 
-
-
 The `mallDependencies` component includes all required frontend assets.
 
 ## Properties

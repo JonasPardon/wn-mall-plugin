@@ -1,9 +1,7 @@
 # ProductsFilter
 
-
-
-The `ProductsFilter` displays filters for a category. It's selection will be applied to a result set displayed by the
- [Products component](./products.md).
+The `ProductsFilter` displays filters for a category. It's selection will be applied to 
+a result set displayed by the [Products component](./products.md).
  
 ::: warning
 You don't have to specify the `includeChildren`, `includeVariants` and `category` properties.
@@ -19,10 +17,10 @@ have used in the Products component.
 
 Select only items from this [Category](/guide/usage/categories). Possible values are:
 
-| Value | Description |
-| ----- | ----------- |
-| `null` | Don't filter by category (display everything) |
-| `8` | Only show products from the category with the ID `8` (use any integer) |
+| Value   | Description                                                            |
+| ------- | ---------------------------------------------------------------------- |
+| `null`  | Don't filter by category (display everything)                          |
+| `8`     | Only show products from the category with the ID `8` (use any integer) |
 | `:slug` | Use the page's `:slug` URL parameter to find the category to filter by |
 
 If not specified the same value as specified on the [Products component](./products.md) will be used.
@@ -47,9 +45,11 @@ Display a price range filter.
 
 Display a brands dropdown.
 
+<!-- TODO - Report this filter from Offline.Mall
 ### `showCategoryFilter` (bool)
 
 Display a categories filter list. Handy, if you are displaying all products in the shop on a single page but still want to be able to filter by category.
+-->
 
 ### `showOnSaleFilter` (bool)
 
@@ -84,7 +84,7 @@ includeSliderAssets = 1
         </div>
         <div class="col-12 col-md-8">
             <h2>{{ products.category.name }}</h2>
-    
+
             {% component 'products' %}
         </div>
     </div>
@@ -93,7 +93,7 @@ includeSliderAssets = 1
 
 ### Display all products of a shop with filters
 
-```ìni
+```ini
 title = "Show All"
 url = "/all"
 layout = "default"

@@ -1,7 +1,5 @@
 # Products
 
-
-
 The `Products` component displays a list of products. The list can be sorted, filtered and paginated.
 
 ## Properties
@@ -10,10 +8,10 @@ The `Products` component displays a list of products. The list can be sorted, fi
 
 Select only items from this [Category](/guide/usage/categories). Possible values are:
 
-| Value | Description |
-| ----- | ----------- |
-| `null` | Don't filter by category (display everything) |
-| `8` | Only show products from the category with the ID `8` (use any integer) |
+| Value   | Description                                                            |
+| ------- | ---------------------------------------------------------------------- |
+| `null`  | Don't filter by category (display everything)                          |
+| `8`     | Only show products from the category with the ID `8` (use any integer) |
 | `:slug` | Use the page's `:slug` URL parameter to find the category to filter by |
 
 ### `filterComponent` (string)
@@ -27,22 +25,22 @@ Use this property to force a filter for this component instance.
 
 The expected value is a encoded query string. You can tweak your filter
 using the [ProductsFilter](/guide/components/products-filter) component and simply copy and paste
-the query string:
+the query string.
 
-https://mall.offline.swiss/en/category/bikes[?on_sale=true&material=aluminium.carbon&color=dark-grey](https://mall.offline.swiss/en/category/bikes?on_sale=true&material=aluminium.carbon&color=dark-grey)
+For example, https:\//mywebsite.com/en/category/bikes?**on_sale=true&material=aluminium.carbon&color=dark-grey** url give the following filter string:
 
 ```
 filter = "on_sale=true&material=aluminium.carbon&color=dark-grey"
 ```
 
-### `includeChildren` (bool)
-
-Include all products or variants from child categories as well.
-
 ### `setPageTitle` (bool)
 
 If a category is defined, overwrite the page's title with the category's name. Also set any SEO information stored 
 with the category. 
+
+### `includeChildren` (bool)
+
+Include all products or variants from child categories as well.
 
 ### `includeVariants` (bool)
 
@@ -62,16 +60,17 @@ Display more than one page.
 
 The sort mode applied to the result set. Possible values are:
 
-| Value        | Description           |
-| ------------ | --------------------- |
-| `manual`     | Order defined via Backend   |
-| `bestseller` | Best selling first    |
-| `latest`     | Latest products first |
-| `oldest`     | Oldest products first | 
-| `price_low`  | Lowest price first    |
-| `price_high` | Highest price first   |
-| `random`     | Sort randomly         |
-| `name`       | Sort by name          |
+| Value        | Description               |
+| ------------ | ------------------------- |
+| `bestseller` | Best selling first        |
+| `ratings`    | Highest rated first       |
+| `manual`     | Order defined via Backend |
+| `latest`     | Latest products first     |
+| `price_low`  | Lowest price first        |
+| `price_high` | Highest price first       |
+| `oldest`     | Oldest products first     | 
+| `random`     | Sort randomly             |
+| `name`       | Sort by name              |
 
 ## Example implementations
 
@@ -137,22 +136,24 @@ perPage = 4
 paginate = 0
 sort = "random"
 ==
-use Winter\Mall\Models\Category;
+<?php
+    use Winter\Mall\Models\Category;
 
-function onStart() {
-    // Fetch the category from the product component.
-    $productComponent = $this->findComponentByName('product');
-    $item = optional($productComponent)->item;
-    if (!$item) {
-        return;
+    function onStart() {
+        // Fetch the category from the product component.
+        $productComponent = $this->findComponentByName('product');
+        $item = optional($productComponent)->item;
+        if (!$item) {
+            return;
+        }
+        $category = optional($item->categories)->first();
+        if (!$category) {
+            return;
+        }
+        // If a category is available, use it for the products component.
+        $this->findComponentByName('relatedProducts')->category = $category;
     }
-    $category = optional($item->categories)->first();
-    if (!$category) {
-        return;
-    }
-    // If a category is available, use it for the products component.
-    $this->findComponentByName('relatedProducts')->category = $category;
-}
+?>
 ==
 {% component 'product' %}
 

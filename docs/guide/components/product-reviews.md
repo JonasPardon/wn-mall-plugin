@@ -1,7 +1,5 @@
 # ProductReviews
 
-
-
 The `ProductReviews` component displays all Reviews for a Product or Variant.
 
 ## Properties
@@ -14,6 +12,10 @@ ID of the Product model.
 
 ID of the Variant model.
 
+### `perPage` (int)
+
+How many items to show per page.
+
 ### `currentVariantReviewsOnly` (boolean)
 
 If Reviews are enabled, display only Reviews for the currently viewed Variant.
@@ -23,7 +25,8 @@ By default Reviews from all Variants of the same Product are shown.
 ## Example implementations
 
 ::: tip 
-This component is included by the [Product component](./product.md) by default. You do not have to implement it separately.
+This component is included by the [Product component](./product.md) by default.  
+**You do not have to implement it separately.**
 ::: 
 
 ### Display all Reviews of a Product
