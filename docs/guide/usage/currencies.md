@@ -1,7 +1,5 @@
 # Currencies
 
-
-
 Currencies can be managed via `Backend settings > Mall: General > Currencies`.
 They are used for all pricing information in the plugin.
 

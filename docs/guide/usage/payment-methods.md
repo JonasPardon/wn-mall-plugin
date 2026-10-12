@@ -1,11 +1,9 @@
 # Payments
 
-
-
 ## Payment gateways
 
-`Payment gateways` are of technical nature and won't be visible to the user. You can
-use the payment gateway settings page to configure your API keys and other settings for
+`Payment gateways` are of technical nature and won't be visible to the user. You can 
+use the payment gateway settings page to configure your API keys and other settings for 
 each gateway.
 
 Each gateway can be used by one or many payment methods.
@@ -22,10 +20,10 @@ name, a description and a logo for each payment method.
 
 You can also specify special payment instructions (see below) or fees 
 that will be added to the user's cart during checkout.
-   
+
 Payment methods use a single `Payment gateway` to process a payment.
 
-### Fees    
+### Fees
 
 You can define fixed and variable fees that will be added to the user's cart
 during checkout.
@@ -55,7 +53,7 @@ Sample instructions for a "Payment in advance" method could be:
 {% if order %}
     Send your payment to:
     *Bank information*
-    
+
     Payment id: {{ order.payment_hash }}
 {% endif %}
 ```

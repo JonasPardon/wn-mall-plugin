@@ -1,7 +1,5 @@
 # Shipping methods
 
-
-
 `Shipping methods` are presented to a customer during checkout.  
 
 You can add certain restrictions on the availability of a shipping method.
@@ -36,5 +34,5 @@ This way the correct shipping method will be set automatically during checkout s
 You can create multiple rates to increase or decrease the shipping method's cost depending
 on the total weight of an order.
 
-To use this feature make sure to add `weight` information to each product. Products
-without a weight property will be calculated as 0 gramms.
+To use this feature make sure to add `weight` information to **each product**. 
+Products without a weight property will be calculated as 0 grams.

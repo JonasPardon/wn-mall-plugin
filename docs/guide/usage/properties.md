@@ -1,7 +1,5 @@
 # Properties
 
-
-
 Properties are used to describe a [Product or Variant](./products.md) in your store.
 
 Properties serve two purposes:
@@ -15,19 +13,20 @@ Properties can be defined in the backend under `Catalogue > Properties`.
 
 ### Property groups
 
-Every property has to belong to a property group. Common property groups are `Size`, `Dimensions` or `Technical 
+**Every property has to belong to a property group.**  
+Common property groups are `Size`, `Dimensions` or `Technical 
 specs`. You can of course define as many groups as your use-case demands.
 
-Every group needs to be given a `Name` (used in the backend). The `Display name`
+Every group needs to be given a `Name` (used in the backend). The `Display name` 
 (optional name to use in the frontend) and `Description` attributes are optional.
 
-If you manage a high number of products you can use the `Name` and `Display Name` properties to give your groups 
-descriptive names with more context in the backend (`Bike Size`, `Shoe Size`, `Package Size`) while
-displaying a more generic name in the frontend (`Size` for everything, context is
-given by the currently viewed category).    
+If you manage a high number of products you can use the `Name` and `Display Name` 
+properties to give your groups descriptive names with more context in the backend 
+(`Bike Size`, `Shoe Size`, `Package Size`) while displaying a more generic name in 
+the frontend (`Size` for everything, context is given by the currently viewed category).    
 
 ::: tip
-Make sure to name your groups only as specific as needed. Giving then generic names will
+Make sure to name your groups only as specific as needed. Giving then generic names will 
 make it easier to re-use them among different products.
 :::
 
@@ -49,9 +48,9 @@ The table below shows some common `Properties`.
 
 #### Use for Variants
 
-If a `Property` will be used to describe the different [Variants of a Product](./products.md) this option
-should be enabled. A perfect example is the `Size` property where a Product is available as differently
-sized Variants. The `Material` property will be the same for all sizes
+If a `Property` will be used to describe the different [Variants of a Product](./products.md) 
+this option should be enabled. A perfect example is the `Size` property where a Product 
+is available as differently sized Variants. The `Material` property will be the same for all sizes 
 so it should *not* be used to describe Variants.
 
 #### Filter type
@@ -68,7 +67,7 @@ The table below shows some common `Filter type` setups.
 | Height      | Range          |
 | Ingredients | Without filter |
 
-A `Set` filter will display all available Property values. The user can select one or many of these values to filter 
-products.
+A `Set` filter will display all available Property values. The user can select one or many 
+of these values to filter products.
 
 A `Range` filter will display a slider control. The user can set a specific range to filter matching products. 

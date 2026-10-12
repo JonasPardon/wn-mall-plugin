@@ -1,7 +1,5 @@
 # Virtual products
 
-
-
 If a product is not something physical (like a file), you can mark it as "virtual".
 
 Virtual products are offered to the customer as a download. After a payment
@@ -15,16 +13,17 @@ A virtual product may consist of a file uploaded by the site admin. In this case
 each customer receives the same file (for example an e-book).
 
 There is also the possibility to [listen for an event where a customer specific
-file can be attached](#generate-user-specific-product-files) to a virtual product (for example a generated gift card).
+file can be attached](#generate-user-specific-product-files) to a virtual product
+(for example a generated gift card).
 
 ## Product files
 
-Each virtual product can have exactly one file attached. This is the file that
+Each virtual product can have exactly **one** file attached. This is the file that
 is sent to the user once the product is paid.
 
 Newer versions of this file can be uploaded at any time. This way the user can 
-download the latest version of the product even after the initial purchase &ndash; given that 
-the download grant has not expired.
+download the latest version of the product even after the initial purchase &ndash;
+given that the download grant has not expired.
 
 The user can only ever download the latest file version by default.
 
