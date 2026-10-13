@@ -1,8 +1,13 @@
+<script setup>
+import BadgeStd from '../../.vitepress/components/BadgeStd.vue'
+</script>
+
 # Events
 
 The wn-mall-plugin emits the following events:
 
 ## Order
+<!-- <BadgeStd label="Full parity with OFFLINE.Mall" color="tip" /> -->
 
 ### `mall.order.beforeCreate`
 
@@ -29,6 +34,7 @@ An order's payment state has changed. This event receives the modified `$order` 
 An order has been marked as shipped. This event receives the shipped `$order` as a single argument.
 
 ## Customer
+<!-- <BadgeStd label="Full parity with OFFLINE.Mall" color="tip" /> -->
 
 ### `mall.customer.beforeSignup`
 
@@ -214,6 +220,13 @@ It receives the `Product` model (for Products) or the `Product` and `Variant` mo
 
 ## Backend 
 
+<!-- TODO - Add events parity with Offline.Mall for backend orders
+https://github.com/OFFLINE-GmbH/oc-mall-plugin/commit/b10343c9ee1fd2e3a549d32650819f20ca40e2d5
+
+### `mall.backend.orders.extendCustomerDetails`
+### `mall.backend.orders.extendItemDetails`
+-->
+
 <!-- TODO - Check to see if this event can be added - see : https://github.com/OFFLINE-GmbH/oc-mall-plugin/blob/cdb9d836e1066757dea7c5c6dbbcb9178ede6575/controllers/orders/show.php#L103
 ### `mall.backend.order.sidebar`
 
@@ -232,7 +245,7 @@ Event::listen('mall.backend.order.sidebar', function (\Winter\Mall\Models\Order 
             ],
         ]
     ]);
-    
+
     return $form->render();
 });
 ```

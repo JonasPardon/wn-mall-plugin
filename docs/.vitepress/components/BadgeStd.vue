@@ -44,6 +44,11 @@ defineProps<{
     background-color: var(--vp-badge-warning-bg);
 }
 
+.badge-success .badge-inner {
+    color: var(--vp-badge-success-text);
+    background-color: var(--vp-badge-success-bg);
+}
+
 .badge-danger .badge-inner {
     color: var(--vp-badge-danger-text);
     background-color: var(--vp-badge-danger-bg);

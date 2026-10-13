@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "Mall WinterCMS Plugin",
+    title: "Winter.Mall documentation - WinterCMS e-commerce plugin",
     description: "The all-inclusive e-commerce solution for WinterCMS.",
     base: '/wn-mall-plugin/',
     vite: {
@@ -10,6 +10,7 @@ export default defineConfig({
             port: 3003
         }
     },
+
     // https://vitepress.dev/reference/default-theme-config
     themeConfig: {
         logo: {
